@@ -1,16 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "GTWalsheimMedium",  sans-serif 
+}
+
+section{
+  height: 100vh;
+}
+
+section:nth-child(2){
+  height: 150vh;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  
 }
 
 * {
   box-sizing: border-box;
+}
+
+.content{
+  position: absolute;
+}
+
+.shadow-box{
+/* box-shadow: inset 0 0 0 3000px rgba(150, 150, 150, 0.192); */
+background: linear-gradient(
+  0deg,#6c6d72 15.06%,#0b112e33 97.16%);
+  
+}
+
+
+
+@font-face {
+
+  font-family: "GTWalsheimMedium";
+
+  src: local("GTWalsheimMedium"),
+
+    url("../public/fonts/GTWalsheimMedium.ttf") format("truetype");
+
+}
+
+@font-face {
+
+  font-family: "GTWalsheim-Regular";
+
+  src: local("GTWalsheim-Regular.ttf"),
+
+    url("../public/fonts/GTWalsheim-Regular.ttf") format("truetype");
+
+}
+
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.hamRotate180.active {
+  transform: rotate(180deg);
+}
+.line {
+  fill:none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke:#ffff;
+  stroke-width:4.5;
+  stroke-linecap:round;
+}
+.ham1 .top {
+  stroke-dasharray: 40 139;
+}
+.ham1 .bottom {
+  stroke-dasharray: 40 180;
+}
+.ham1.active .top {
+  stroke-dashoffset: -98px;
+}
+.ham1.active .bottom {
+  stroke-dashoffset: -138px;
+}
+
+.featured-2{
+  color: #171717;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+.contact-me{
+  background: linear-gradient(
+    0deg,#6c6d72 15.06%,#0b112e33 97.16%);
 }
